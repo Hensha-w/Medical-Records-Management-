@@ -13,7 +13,7 @@ VS Code: Install the "Markdown Preview Mermaid Support" extension
 ### Main Navigation Flow
 
 ```mermaid
-%%{init: {'themeVariables': { 'fontSize': '40px' }}}%%
+%%{init: {'themeVariables': { 'fontSize': '30px' }}}%%
 flowchart TD
     A[User Lands on Homepage] --> B{User Type}
     B --> C[Public User]
@@ -26,7 +26,7 @@ flowchart TD
 ### Public User Flow
 
 ```mermaid
-%%{init: {'themeVariables': { 'fontSize': '40px' }}}%%
+%%{init: {'themeVariables': { 'fontSize': '30px' }}}%%
 flowchart TD
     C[Public User] --> C1[About Us]
     C --> C2[Contact / Support]
@@ -39,7 +39,7 @@ flowchart TD
 ### Hospital Admin Flow
 
 ```mermaid
-%%{init: {'themeVariables': { 'fontSize': '100px' }}}%%
+%%{init: {'themeVariables': { 'fontSize': '60px' }}}%%
 flowchart TD
     D[Hospital Admin] --> D1[Dashboard Overview]
     D1 --> D2[Hospital Profile]
