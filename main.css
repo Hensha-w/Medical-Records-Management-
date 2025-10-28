@@ -761,3 +761,100 @@ input:focus {
   overflow: hidden; clip: rect(1px,1px,1px,1px);
   white-space: nowrap; border: 0; padding: 0; margin: -1px;
 }
+
+/* register css */
+/* Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  height: 100%;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: #f0ecef;
+}
+
+/* Center content */
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+/* Card styling */
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  text-align: center;
+  padding: 36px 32px;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Logo */
+.logo-wrap {
+  margin-bottom: 18px;
+}
+.logo {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Title */
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #212121;
+  margin-bottom: 22px;
+}
+
+/* Buttons container */
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Button */
+.btn-primary {
+  background: linear-gradient(180deg, #007BFF, #0056D2);
+  color: #fff;
+  border: none;
+  border-radius: 28px;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+  width: 180px;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(0,123,255,0.18);
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 10px 22px rgba(0,123,255,0.25);
+}
+.btn-primary:active {
+  transform: translateY(1px);
+}
+
+/* OR text */
+.or-text {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 420px) {
+  .card {
+    padding: 28px 20px;
+  }
+  .logo {
+    width: 100px;
+  }
+  .btn-primary {
+    width: 100%;
+  }
+}

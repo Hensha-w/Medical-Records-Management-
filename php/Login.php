@@ -63,11 +63,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: dashboard.php');
         exit;
     } else {
-        echo 'Login failed (demo). Use demo@hospital.com / Password123 or set up the database. <a href="index.html">Back</a>';
+        echo 'Login failed (demo). Use demo@hospital.com / Password123 or set up the database. <a href="login.html">Back</a>';
         exit;
     }
 } else {
-    header('Location: index.html');
+    header('Location: login.html');
     exit;
 }
 ?>
