@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hospital Dashboard</title>
+  <link rel="stylesheet" href="hospital-dashboard.css">
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo-section">
+        <img src="logo.png" alt="Logo" class="logo" />
+        <h2>Hospital Panel</h2>
+      </div>
+      <nav class="nav">
+        <a href="#" class="active">Dashboard</a>
+        <a href="#">Hospital Profile</a>
+        <a href="#">Doctors</a>
+        <a href="#">Patients</a>
+        <a href="#">Uploads</a>
+        <a href="#">Storage Logs</a>
+        <a href="#">Security</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <header class="topbar">
+        <h1>Dashboard Overview</h1>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+      </header>
+
+      <!-- Dashboard Cards -->
+      <section class="cards">
+        <div class="card">
+          <h3>Total Patients</h3>
+          <p><?= $totalPatients ?></p>
+        </div>
+        <div class="card">
+          <h3>Total Doctors</h3>
+          <p><?= $totalDoctors ?></p>
+        </div>
+        <div class="card">
+          <h3>Storage Used</h3>
+          <p><?= $storageUsed ?></p>
+        </div>
+      </section>
+
+      <!-- Recent Uploads -->
+      <section class="uploads">
+        <h2>Recent Uploads</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>File Name</th>
+              <th>Date Uploaded</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php foreach ($recentUploads as $upload): ?>
+              <tr>
+                <td><?= htmlspecialchars($upload['file']) ?></td>
+                <td><?= htmlspecialchars($upload['date']) ?></td>
+              </tr>
+            <?php endforeach; ?>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="hospital_dashboard.js"></script>
+</body>
+</html>

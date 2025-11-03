@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patient Sign Up</title>
+  <link rel="stylesheet" href="/Medical-Records-Management-/CSS/patient-signup.css" />
+</head>
+<body>
+  <main class="signup-page">
+    <section class="signup-card">
+      <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1IDVMNSAxNVYzNUgyNVYyNUgzNVY1SDE1WiIgc3Ryb2tlPSIjMTk3NkQwIiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTTE1IDE1SDI1VjI1SDE1VjE1WiIgc3Ryb2tlPSIjMTk3NkQwIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+" alt="Hospital Record Logo" class="logo" />
+      <h2 class="title">Patient Registration</h2>
+
+      <!-- Progress bar -->
+      <div class="progress-container">
+        <div class="progress-step active">1</div>
+        <div class="progress-line"></div>
+        <div class="progress-step">2</div>
+        <div class="progress-line"></div>
+        <div class="progress-step">3</div>
+      </div>
+
+      <form id="signupForm">
+        <!-- Step 1: Personal Information -->
+        <div class="form-step active">
+          <h3>Personal Information</h3>
+          <div class="input-group">
+            <label>Full Name</label>
+            <input type="text" name="fullname" placeholder="John Adewale" required />
+          </div>
+          <div class="input-group">
+            <label>Date of Birth</label>
+            <input type="date" name="dob" required />
+          </div>
+          <div class="input-group">
+            <label>Gender</label>
+            <select name="gender" required>
+              <option value="">Select Gender</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <button type="button" class="btn next-btn">Next</button>
+        </div>
+
+        <!-- Step 2: Contact Info -->
+        <div class="form-step">
+          <h3>Contact Information</h3>
+          <div class="input-group">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="example@gmail.com" required />
+          </div>
+          <div class="input-group">
+            <label>Phone Number</label>
+            <input type="tel" name="phone" placeholder="+234 801 234 5678" required />
+          </div>
+          <div class="input-group">
+            <label>Address</label>
+            <textarea name="address" rows="2" placeholder="Street, City, State" required></textarea>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn prev-btn">Back</button>
+            <button type="button" class="btn next-btn">Next</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Account Setup -->
+        <div class="form-step">
+          <h3>Account Setup</h3>
+          <div class="input-group">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Enter password" required />
+          </div>
+          <div class="input-group">
+            <label>Confirm Password</label>
+            <input type="password" name="confirmPassword" placeholder="Confirm password" required />
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" id="terms" required />
+            <label for="terms">I agree to the Terms and Privacy Policy</label>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn prev-btn">Back</button>
+            <button type="submit" class="btn submit-btn">Sign Up</button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="/Medical-Records-Management-/JS/patient-signup.js"></script>
+</body>
+</html>
