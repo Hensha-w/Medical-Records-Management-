@@ -1,75 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Hospital Dashboard</title>
-  <link rel="stylesheet" href="hospital-dashboard.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospital Admin Dashboard</title>
+  <link rel="stylesheet" href="/Medical-Records-Management-/CSS/hospital-dashboard.css" />
+  <script defer src="/Medical-Records-Management-/JS/hospital-dashboard.js"></script>
 </head>
 <body>
   <div class="dashboard">
     <!-- Sidebar -->
     <aside class="sidebar">
       <div class="logo-section">
-        <img src="logo.png" alt="Logo" class="logo" />
-        <h2>Hospital Panel</h2>
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1IDVMNSAxNVYzNUgyNVYyNUgzNVY1SDE1WiIgc3Ryb2tlPSIjMTk3NkQwIiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTTE1IDE1SDI1VjI1SDE1VjE1WiIgc3Ryb2tlPSIjMTk3NkQwIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+" 
+        alt="Hospital Logo" class="logo" />
+        <h2>HealthTrack</h2>
       </div>
-      <nav class="nav">
+      <nav class="menu">
         <a href="#" class="active">Dashboard</a>
         <a href="#">Hospital Profile</a>
         <a href="#">Doctors</a>
         <a href="#">Patients</a>
-        <a href="#">Uploads</a>
+        <a href="#">Upload Center</a>
         <a href="#">Storage Logs</a>
         <a href="#">Security</a>
+        <a href="#">Settings</a>
+        <a href="#">Support</a>
       </nav>
     </aside>
 
     <!-- Main Content -->
-    <main class="main">
+    <main class="main-content">
+      <!-- Top Bar -->
       <header class="topbar">
+        <button id="menuToggle" class="menu-toggle">☰</button>
         <h1>Dashboard Overview</h1>
-        <button class="logout-btn" onclick="logout()">Logout</button>
+        <div class="admin-info">
+          <span>Admin: City Hospital</span>
+          <img src="admin-avatar.png" alt="Admin Avatar" class="avatar" />
+        </div>
       </header>
 
-      <!-- Dashboard Cards -->
-      <section class="cards">
-        <div class="card">
-          <h3>Total Patients</h3>
-          <p><?= $totalPatients ?></p>
-        </div>
+      <!-- Overview Cards -->
+      <section class="overview">
         <div class="card">
           <h3>Total Doctors</h3>
-          <p><?= $totalDoctors ?></p>
+          <p>24</p>
+        </div>
+        <div class="card">
+          <h3>Total Patients</h3>
+          <p>158</p>
+        </div>
+        <div class="card">
+          <h3>Reports Uploaded</h3>
+          <p>512</p>
         </div>
         <div class="card">
           <h3>Storage Used</h3>
-          <p><?= $storageUsed ?></p>
+          <p>3.5GB / 10GB</p>
         </div>
       </section>
 
-      <!-- Recent Uploads -->
-      <section class="uploads">
-        <h2>Recent Uploads</h2>
+      <!-- Recent Activity -->
+      <section class="activity">
+        <h2>Recent Activities</h2>
         <table>
           <thead>
             <tr>
-              <th>File Name</th>
-              <th>Date Uploaded</th>
+              <th>Date</th>
+              <th>Action</th>
+              <th>User</th>
+              <th>Details</th>
             </tr>
           </thead>
           <tbody>
-            <?php foreach ($recentUploads as $upload): ?>
-              <tr>
-                <td><?= htmlspecialchars($upload['file']) ?></td>
-                <td><?= htmlspecialchars($upload['date']) ?></td>
-              </tr>
-            <?php endforeach; ?>
+            <tr>
+              <td>Nov 4, 2025</td>
+              <td>File Upload</td>
+              <td>Dr. John Bello</td>
+              <td>Uploaded MRI Scan for Patient #1245</td>
+            </tr>
+            <tr>
+              <td>Nov 3, 2025</td>
+              <td>New Patient</td>
+              <td>Admin</td>
+              <td>Added Patient #1278 - Sarah Mark</td>
+            </tr>
+            <tr>
+              <td>Nov 2, 2025</td>
+              <td>Doctor Added</td>
+              <td>Admin</td>
+              <td>Added Dr. Mary Okon (Cardiology)</td>
+            </tr>
           </tbody>
         </table>
       </section>
     </main>
   </div>
-
-  <script src="hospital_dashboard.js"></script>
 </body>
 </html>
