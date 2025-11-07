@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospital Admin Dashboard - Doctors</title>
+  <link rel="stylesheet" href="/Medical-Records-Management-/CSS/doctor.css" />
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="logo-section">
+        <img src="hospital-logo.png" alt="Hospital Logo" class="logo">
+        <h2>MedCare Hospital</h2>
+      </div>
+      <div class="menu">
+        <a href="#">Dashboard</a>
+        <a href="#">Hospital Profile</a>
+        <a href="#" class="active">Doctors</a>
+        <a href="#">Patients</a>
+        <a href="#">Appointments</a>
+        <a href="#">Settings</a>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Top Bar -->
+      <div class="topbar">
+        <button class="menu-toggle">&#9776;</button>
+        <h1>Doctors Management</h1>
+        <div class="admin-info">
+          <img src="avatar.png" alt="Admin" class="avatar">
+          <span>Admin</span>
+        </div>
+      </div>
+
+      <!-- Doctors Section -->
+      <div class="doctor-section">
+        <div class="header">
+          <h2>Doctor Directory</h2>
+          <button id="addDoctorBtn" class="btn edit">+ Add Doctor</button>
+        </div>
+
+        <div class="profile-card">
+          <table class="doctor-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Specialization</th>
+                <th>Contact</th>
+                <th>Gender</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="doctorList">
+              <tr>
+                <td>Dr. John Smith</td>
+                <td>Cardiology</td>
+                <td>Heart Specialist</td>
+                <td>08012345678</td>
+                <td>Male</td>
+                <td><span class="status active">Online</span></td>
+                <td>
+                  <button class="btn edit small">Edit</button>
+                  <button class="btn save small">Remove</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal (Add/Edit Doctor) -->
+  <div class="modal" id="doctorModal">
+    <div class="modal-content">
+      <h3>Add / Edit Doctor</h3>
+      <form id="doctorForm">
+        <label>Full Name</label>
+        <input type="text" id="name" required>
+
+        <label>Department</label>
+        <input type="text" id="department" required>
+
+        <label>Specialization</label>
+        <input type="text" id="specialization" required>
+
+        <label>Contact Info</label>
+        <input type="text" id="contact" required>
+
+        <label>Gender</label>
+        <select id="gender">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+
+        <label>Status</label>
+        <select id="status">
+          <option value="Online">Online</option>
+          <option value="Offline">Offline</option>
+          <option value="On Leave">On Leave</option>
+        </select>
+
+        <div class="form-actions">
+          <button type="submit" class="btn edit">Save</button>
+          <button type="button" class="btn save cancel-btn">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="doctors.js"></script>
+</body>
+</html>
