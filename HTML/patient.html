@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospital Admin Dashboard - Patients</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/Medical-Records-Management-/CSS/patient.css" />
+</head>
+<body>
+
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="logo-section">
+        <img src="logo.png" alt="Hospital Logo" class="logo">
+        <h2>Hospital Admin</h2>
+      </div>
+      <nav class="menu">
+        <a href="#">Dashboard</a>
+        <a href="#">Hospital Profile</a>
+        <a href="#">Doctors</a>
+        <a href="#" class="active">Patients</a>
+        <a href="#">Upload Center</a>
+        <a href="#">Storage Logs</a>
+        <a href="#">Security</a>
+        <a href="#">Settings</a>
+        <a href="#">Support</a>
+      </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="topbar">
+        <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+        <h1>Patients</h1>
+        <div class="admin-info">
+          <img src="admin-avatar.jpg" alt="Admin" class="avatar">
+          <span>Admin</span>
+        </div>
+      </div>
+
+      <!-- Patient Table -->
+      <section class="patient-section">
+        <table>
+          <thead>
+            <tr>
+              <th>Hospital Number</th>
+              <th>Name</th>
+              <th>Gender</th>
+              <th>Admission Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>HSP-001</td>
+              <td>Jane Doe</td>
+              <td>Female</td>
+              <td><span class="status admitted">Admitted</span></td>
+              <td><button class="btn view" onclick="openModal('Jane Doe')">View Medical Record</button></td>
+            </tr>
+            <tr>
+              <td>HSP-002</td>
+              <td>John Smith</td>
+              <td>Male</td>
+              <td><span class="status discharged">Discharged</span></td>
+              <td><button class="btn view" onclick="openModal('John Smith')">View Medical Record</button></td>
+            </tr>
+            <tr>
+              <td>HSP-003</td>
+              <td>Mary Johnson</td>
+              <td>Female</td>
+              <td><span class="status admitted">Admitted</span></td>
+              <td><button class="btn view" onclick="openModal('Mary Johnson')">View Medical Record</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="recordModal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal()">Close</button>
+      <h3>Medical Record</h3>
+      <p><strong>Patient Name:</strong> <span id="patientName"></span></p>
+      <p><strong>Diagnosis:</strong> Hypertension</p>
+      <p><strong>Treatment:</strong> Daily blood pressure monitoring, prescribed medication (Amlodipine 5mg)</p>
+      <p><strong>Doctor Assigned:</strong> Dr. Sarah Thomas</p>
+      <p><strong>Next Appointment:</strong> 14-Nov-2025</p>
+    </div>
+  </div>
+
+  <script src="/Medical-Records-Management-/JS/patient.js"></script>
+
+</body>
+</html>

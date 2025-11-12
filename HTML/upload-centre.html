@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Centre | Hospital Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/Medical-Records-Management-/CSS/upload-centre.css">
+</head>
+<body>
+
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="logo-section">
+        <img src="logo.png" alt="Hospital Logo" class="logo">
+        <h2>Hospital Admin</h2>
+      </div>
+      <nav class="menu">
+        <a href="#">Dashboard</a>
+        <a href="#">Hospital Profile</a>
+        <a href="#">Doctors</a>
+        <a href="#">Patients</a>
+        <a href="#" class="active">Upload Center</a>
+        <a href="#">Security</a>
+        <a href="#">Settings</a>
+        <a href="#">Support</a>
+      </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="topbar">
+        <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+        <h1>Upload Centre</h1>
+        <div class="admin-info">
+          <img src="admin-avatar.jpg" alt="Admin" class="avatar">
+          <span>Admin</span>
+        </div>
+      </div>
+
+      <!-- Upload Centre -->
+      <div class="upload-centre">
+        <div class="upload-header">
+          <h2>Manage Medical Documents</h2>
+          <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search by Patient or Doctor">
+            <select id="fileTypeFilter">
+              <option value="">All Types</option>
+              <option value="Lab Report">Lab Report</option>
+              <option value="Prescription">Prescription</option>
+              <option value="Scan">Scan/Image</option>
+              <option value="Admin Document">Admin Document</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="upload-area" id="uploadArea">
+          <p>Drag & Drop files here or</p>
+          <label class="upload-btn" for="fileInput">Browse Files</label>
+          <input type="file" id="fileInput" multiple>
+        </div>
+
+        <table id="fileTable">
+          <thead>
+            <tr>
+              <th>File Name</th>
+              <th>Type</th>
+              <th>Uploaded By</th>
+              <th>Date</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- JS will add uploads here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="/Medical-Records-Management-/JS/upload-centre.js"></script>
+
+</body>
+</html>
