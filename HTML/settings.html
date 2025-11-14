@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settings | Hospital Dashboard</title>
+  <link rel="stylesheet" href="/Medical-Records-Management-/CSS/settings.css" />
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo-section">
+        <img src="hospital-logo.png" alt="Hospital Logo" class="logo" />
+        <h2>Hospital Admin</h2>
+      </div>
+      <nav class="menu">
+        <a href="#">Dashboard</a>
+        <a href="#">Hospital Profile</a>
+        <a href="#">Doctors</a>
+        <a href="#">Patients</a>
+        <a href="#">Upload Center</a>
+        <a href="#">Security</a>
+        <a href="#" class="active">Settings</a>
+        <a href="#">Support</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Top Bar -->
+      <div class="topbar">
+        <button class="menu-toggle">☰</button>
+        <h1>System Settings</h1>
+        <div class="admin-info">
+          <img src="admin-avatar.png" alt="Admin Avatar" class="avatar" />
+          <span>Admin</span>
+        </div>
+      </div>
+
+      <!-- Settings Section -->
+      <div class="settings-section">
+
+        <!-- General Settings -->
+        <div class="card">
+          <h2>General Settings</h2>
+          <form id="generalForm">
+            <div class="form-group">
+              <label>Hospital Name</label>
+              <input type="text" id="hospitalName" placeholder="Enter hospital name" />
+            </div>
+            <div class="form-group">
+              <label>Contact Email</label>
+              <input type="email" id="contactEmail" placeholder="contact@hospital.com" />
+            </div>
+            <div class="form-group">
+              <label>Time Zone</label>
+              <select id="timezone">
+                <option value="WAT">West Africa Time (WAT)</option>
+                <option value="GMT">Greenwich Mean Time (GMT)</option>
+                <option value="EST">Eastern Standard Time (EST)</option>
+              </select>
+            </div>
+            <button type="button" class="btn primary" id="saveGeneral">Save Changes</button>
+          </form>
+        </div>
+
+        <!-- Notification Settings -->
+        <div class="card">
+          <h2>Notification Preferences</h2>
+          <div class="switch-group">
+            <label>📩 Email Notifications</label>
+            <label class="switch">
+              <input type="checkbox" id="emailNoti" checked />
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="switch-group">
+            <label>🔔 System Alerts</label>
+            <label class="switch">
+              <input type="checkbox" id="systemNoti" />
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="switch-group">
+            <label>💬 SMS Notifications</label>
+            <label class="switch">
+              <input type="checkbox" id="smsNoti" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Appearance Settings -->
+        <div class="card">
+          <h2>Appearance</h2>
+          <div class="theme-options">
+            <label><input type="radio" name="theme" value="light" checked /> Light Mode</label>
+            <label><input type="radio" name="theme" value="dark" /> Dark Mode</label>
+          </div>
+          <button class="btn info" id="applyTheme">Apply Theme</button>
+        </div>
+
+        <!-- Account Settings -->
+        <div class="card">
+          <h2>Account Settings</h2>
+          <form id="accountForm">
+            <div class="form-group">
+              <label>Change Username</label>
+              <input type="text" id="username" placeholder="Enter new username" />
+            </div>
+            <div class="form-group">
+              <label>Change Password</label>
+              <input type="password" id="password" placeholder="Enter new password" />
+            </div>
+            <button type="button" class="btn danger" id="updateAccount">Update Account</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="/Medical-Records-Management-/JS/settings.js"></script>
+</body>
+</html>

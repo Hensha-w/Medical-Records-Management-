@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support | Hospital Dashboard</title>
+  <link rel="stylesheet" href="/Medical-Records-Management-/CSS/support.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo-section">
+      <img src="hospital-logo.png" class="logo" />
+      <h2>Hospital Admin</h2>
+    </div>
+
+    <div class="menu">
+      <a href="#">Dashboard</a>
+      <a href="#">Patients</a>
+      <a href="#">Doctors</a>
+      <a href="#">Upload Centre</a>
+      <a href="#">Security</a>
+      <a href="#">Settings</a>
+      <a class="active">Support</a>
+    </div>
+  </aside>
+
+  <!-- Page Content -->
+  <div class="main-content">
+
+    <!-- Topbar -->
+    <div class="topbar">
+      <button class="menu-toggle">☰</button>
+      <h1>Support & Help Center</h1>
+      <div class="admin-info">
+        <img src="admin-avatar.png" class="avatar" />
+        <span>Admin</span>
+      </div>
+    </div>
+
+    <!-- Support Section -->
+    <div class="support-section">
+
+      <!-- HELP CENTER -->
+      <div class="card">
+        <h2>Help Center / Documentation</h2>
+        <ul class="help-list">
+          <li>User Guide – Complete system manual</li>
+          <li>FAQs – Common questions and troubleshooting tips</li>
+          <li>Video Tutorials – step-by-step walkthrough</li>
+          <li>System Setup Instructions</li>
+        </ul>
+        <button class="btn primary">Open Help Center</button>
+      </div>
+
+      <!-- LIVE SUPPORT -->
+      <div class="card">
+        <h2>Live Chat & Contact Support</h2>
+        <p>Need assistance? Our technical team is here to help.</p>
+
+        <div class="contact-box">
+          <p>Hotline: <strong>+234 800 000 0000</strong></p>
+          <p>Email: <strong>support@hospital.com</strong></p>
+        </div>
+
+        <button class="btn info" id="startChatBtn">Start Live Chat</button>
+      </div>
+
+      <!-- FEEDBACK -->
+      <div class="card">
+        <h2>Send Feedback / Report Issue</h2>
+        <form id="feedbackForm">
+          <div class="form-group">
+            <label>Subject</label>
+            <input type="text" id="feedbackSubject" placeholder="Enter subject">
+          </div>
+
+          <div class="form-group">
+            <label>Your Message</label>
+            <textarea id="feedbackMessage" placeholder="Describe the issue or suggestion..."></textarea>
+          </div>
+
+          <button class="btn danger" type="button" id="submitFeedback">Submit Feedback</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="/Medical-Records-Management-/JS/support.js"></script>
+</body>
+</html>
