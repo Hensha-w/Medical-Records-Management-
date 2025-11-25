@@ -1,43 +1,91 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Hospital Record — Log In</title>
-  <link rel="stylesheet" href="/CSS/login.css" />
-</head>
-<body>
-  <main class="page">
-    <section class="card">
-      <div class="logo-wrap">
-        <!-- Replace src with your logo path -->
-        <img  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1IDVMNSAxNVYzNUgyNVYyNUgzNVY1SDE1WiIgc3Ryb2tlPSIjMjU2M2ViIiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTTE1IDE1SDI1VjI1SDE1VjE1WiIgc3Ryb2tlPSIjMjU2M2ViIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+"
-              alt="HealthSync Logo" alt="Hospital Record Logo" class="logo" />
-      </div>
-
-      <h1 class="title">Log In</h1>
-
-      <form id="loginForm" action="./php/Login.php" method="POST" novalidate>
-        <div class="input-wrap">
-          <label class="visually-hidden" for="email">Email</label>
-          <input id="email" name="email" type="email" placeholder="example@gmail.com" required />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>HealthSync — Log In</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/CSS/main.css" />
+    <link rel="stylesheet" href="/CSS/login.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="login-card">
+        <div class="logo-wrap">
+          <a href="/HTML/index.html" class="nav-brand">
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1IDVMNSAxNVYzNUgyNVYyNUgzNVY1SDE1WiIgc3Ryb2tlPSIjMjU2M2ViIiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTTE1IDE1SDI1VjI1SDE1VjE1WiIgc3Ryb2tlPSIjMjU2M2ViIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+"
+              alt="HealthSync Logo"
+            />
+            <!-- <span>HealthSync</span> -->
+          </a>
         </div>
 
-        <div class="input-wrap">
-          <label class="visually-hidden" for="password">Password</label>
-          <input id="password" name="password" type="password" placeholder="password" required minlength="8" />
+        <div class="login-header">
+          <h1 class="title">Welcome Back</h1>
+          <p class="subtitle">Enter your credentials to access your account</p>
         </div>
 
-        <div class="links">
-          <a href="register.html">Don’t have an account? Sign Up</a>
-          <a href="forgot-password.html" class="right">Forgot Password?</a>
-        </div>
+        <form id="loginForm" action="./php/Login.php" method="POST" novalidate>
+          <div class="input-group">
+            <label for="email">Email Address</label>
+            <div class="input-wrapper">
+              <i class="fas fa-envelope input-icon"></i>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="name@hospital.com"
+                required
+              />
+            </div>
+          </div>
 
-        <button type="submit" class="btn-primary">Log In</button>
-      </form>
-    </section>
-  </main>
+          <div class="input-group">
+            <label for="password">Password</label>
+            <div class="input-wrapper">
+              <i class="fas fa-lock input-icon"></i>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                placeholder="Enter your password"
+                required
+                minlength="8"
+              />
+            </div>
+          </div>
 
-  <script src="./JS/login.js"></script>
-</body>
+          <div class="form-actions">
+            <div class="remember-me">
+              <input type="checkbox" id="remember" />
+              <label for="remember">Remember me</label>
+            </div>
+            <a href="forgot-password.html" class="forgot-password"
+              >Forgot password?</a
+            >
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">
+            Sign In
+          </button>
+
+          <div class="form-footer">
+            <p>Don't have an account? <a href="register.html">Sign up</a></p>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="/JS/login.js"></script>
+  </body>
 </html>
