@@ -1,132 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hospital Sign Up</title>
-  <link rel="stylesheet" href="/CSS/hospital-signup.css" />
-</head>
-<body>
-  <main class="signup-page">
-    <section class="signup-card">
-      <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1IDVMNSAxNVYzNUgyNVYyNUgzNVY1SDE1WiIgc3Ryb2tlPSIjMjU2M2ViIiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTTE1IDE1SDI1VjI1SDE1VjE1WiIgc3Ryb2tlPSIjMjU2M2ViIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+" alt="Hospital Record Logo" class="logo" />
-      <h2 class="title">Hospital Registration</h2>
-
-      <!-- Progress bar -->
-      <div class="progress-container">
-        <div class="progress-step active">1</div>
-        <div class="progress-line"></div>
-        <div class="progress-step">2</div>
-        <div class="progress-line"></div>
-        <div class="progress-step">3</div>
-        <div class="progress-line"></div>
-        <div class="progress-step">4</div>
-        <div class="progress-line"></div>
-        <div class="progress-step">5</div>
-      </div>
-
-      <form id="signupForm">
-        <!-- Step 1: Hospital Info -->
-        <div class="form-step active">
-          <h3>Hospital Information</h3>
-          <div class="input-group">
-            <label>Hospital Name</label>
-            <input type="text" name="hospitalName" placeholder="Grace Medical Center" required />
-          </div>
-          <div class="input-group">
-            <label>Registration Number</label>
-            <input type="text" name="regNumber" placeholder="HOSP12345" required />
-          </div>
-          <button type="button" class="btn next-btn">Next</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HealthSync — Hospital Sign Up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/CSS/main.css" />
+    <link rel="stylesheet" href="/CSS/hospital-signup.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="signup-card">
+        <div class="logo-wrap">
+          <a href="/HTML/index.html" class="nav-brand">
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1IDVMNSAxNVYzNUgyNVYyNUgzNVY1SDE1WiIgc3Ryb2tlPSIjMjU2M2ViIiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTTE1IDE1SDI1VjI1SDE1VjE1WiIgc3Ryb2tlPSIjMjU2M2ViIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+"
+              alt="HealthSync Logo"
+            />
+            <!-- <span>HealthSync</span> -->
+          </a>
         </div>
 
-        <!-- Step 2: Contact Information -->
-        <div class="form-step">
-          <h3>Contact Information</h3>
-          <div class="input-group">
-            <label>Email</label>
-            <input type="email" name="email" placeholder="example@hospital.com" required />
-          </div>
-          <div class="input-group">
-            <label>Phone Number</label>
-            <input type="tel" name="phone" placeholder="+234 801 234 5678" required />
-          </div>
-          <div class="input-group">
-            <label>Website (optional)</label>
-            <input type="url" name="website" placeholder="www.hospital.com" />
-          </div>
-          <div class="btn-group">
-            <button type="button" class="btn prev-btn">Back</button>
-            <button type="button" class="btn next-btn">Next</button>
-          </div>
+        <div class="header-content">
+          <h2 class="title">Hospital Registration</h2>
+          <p class="subtitle">Join our network of healthcare providers</p>
         </div>
 
-        <!-- Step 3: Location Info -->
-        <div class="form-step">
-          <h3>Location Details</h3>
-          <div class="input-group">
-            <label>Address</label>
-            <textarea name="address" rows="2" placeholder="Street, City, State" required></textarea>
-          </div>
-          <div class="input-group">
-            <label>State</label>
-            <input type="text" name="state" placeholder="Lagos" required />
-          </div>
-          <div class="input-group">
-            <label>Country</label>
-            <input type="text" name="country" placeholder="Nigeria" required />
-          </div>
-          <div class="btn-group">
-            <button type="button" class="btn prev-btn">Back</button>
-            <button type="button" class="btn next-btn">Next</button>
-          </div>
+        <!-- Progress bar -->
+        <div class="progress-container">
+          <div class="progress-step active">1</div>
+          <div class="progress-line"></div>
+          <div class="progress-step">2</div>
+          <div class="progress-line"></div>
+          <div class="progress-step">3</div>
+          <div class="progress-line"></div>
+          <div class="progress-step">4</div>
+          <div class="progress-line"></div>
+          <div class="progress-step">5</div>
         </div>
 
-        <!-- Step 4: Admin Account -->
-        <div class="form-step">
-          <h3>Admin Account</h3>
-          <div class="input-group">
-            <label>Admin Full Name</label>
-            <input type="text" name="adminName" placeholder="Dr. John Doe" required />
+        <form id="signupForm">
+          <!-- Step 1: Hospital Info -->
+          <div class="form-step active">
+            <h3>Hospital Information</h3>
+            <div class="input-group">
+              <label>Hospital Name</label>
+              <input
+                type="text"
+                name="hospitalName"
+                placeholder="Grace Medical Center"
+                required
+              />
+            </div>
+            <!-- <div class="input-group">
+              <label>Registration Number</label>
+              <input
+                type="text"
+                name="regNumber"
+                placeholder="HOSP12345"
+                required
+              />
+            </div> -->
+            <button type="button" class="btn btn-primary btn-block next-btn">
+              Next
+            </button>
+            <div class="form-footer">
+              <p>Already have an account? <a href="login.html">Log in</a></p>
+            </div>
           </div>
-          <div class="input-group">
-            <label>Admin Email</label>
-            <input type="email" name="adminEmail" placeholder="admin@hospital.com" required />
-          </div>
-          <div class="input-group">
-            <label>Admin Phone</label>
-            <input type="tel" name="adminPhone" placeholder="+234 801 987 6543" required />
-          </div>
-          <div class="btn-group">
-            <button type="button" class="btn prev-btn">Back</button>
-            <button type="button" class="btn next-btn">Next</button>
-          </div>
-        </div>
 
-        <!-- Step 5: Account Setup -->
-        <div class="form-step">
-          <h3>Account Setup</h3>
-          <div class="input-group">
-            <label>Password</label>
-            <input type="password" name="password" placeholder="Enter password" required />
+          <!-- Step 2: Contact Information -->
+          <div class="form-step">
+            <h3>Contact Information</h3>
+            <div class="input-group">
+              <label>Email Address</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="example@hospital.com"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <label>Phone Number</label>
+              <input
+                type="tel"
+                name="phone"
+                placeholder="+234 801 234 5678"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <label>Website (optional)</label>
+              <input type="url" name="website" placeholder="www.hospital.com" />
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn btn-outline prev-btn">
+                Back
+              </button>
+              <button type="button" class="btn btn-primary next-btn">
+                Next Step
+              </button>
+            </div>
           </div>
-          <div class="input-group">
-            <label>Confirm Password</label>
-            <input type="password" name="confirmPassword" placeholder="Confirm password" required />
-          </div>
-          <div class="checkbox-group">
-            <input type="checkbox" id="terms" required />
-            <label for="terms">I agree to the Terms and Privacy Policy</label>
-          </div>
-          <div class="btn-group">
-            <button type="button" class="btn prev-btn">Back</button>
-            <button type="submit" class="btn submit-btn">Complete Registration</button>
-          </div>
-        </div>
-      </form>
-    </section>
-  </main>
 
-  <script src="/JS/hospital-signup.js"></script>
-</body>
+          <!-- Step 3: Location Info -->
+          <div class="form-step">
+            <h3>Location Details</h3>
+            <div class="input-group">
+              <label>Address</label>
+              <textarea
+                name="address"
+                rows="2"
+                placeholder="Street, City, State"
+                required
+              ></textarea>
+            </div>
+            <div class="row">
+              <div class="input-group half">
+                <label>State</label>
+                <input type="text" name="state" placeholder="Lagos" required />
+              </div>
+              <div class="input-group half">
+                <label>Country</label>
+                <input
+                  type="text"
+                  name="country"
+                  placeholder="Nigeria"
+                  required
+                />
+              </div>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn btn-outline prev-btn">
+                Back
+              </button>
+              <button type="button" class="btn btn-primary next-btn">
+                Next Step
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 4: Admin Account -->
+          <div class="form-step">
+            <h3>Admin Account</h3>
+            <div class="input-group">
+              <label>Admin Full Name</label>
+              <input
+                type="text"
+                name="adminName"
+                placeholder="Dr. John Doe"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <label>Admin Email</label>
+              <input
+                type="email"
+                name="adminEmail"
+                placeholder="admin@hospital.com"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <label>Admin Phone</label>
+              <input
+                type="tel"
+                name="adminPhone"
+                placeholder="+234 801 987 6543"
+                required
+              />
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn btn-outline prev-btn">
+                Back
+              </button>
+              <button type="button" class="btn btn-primary next-btn">
+                Next Step
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 5: Account Setup -->
+          <div class="form-step">
+            <h3>Account Setup</h3>
+            <div class="input-group">
+              <label>Password</label>
+              <div class="input-wrapper">
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Create a strong password"
+                  required
+                />
+              </div>
+            </div>
+            <div class="input-group">
+              <label>Confirm Password</label>
+              <div class="input-wrapper">
+                <input
+                  type="password"
+                  name="confirmPassword"
+                  placeholder="Confirm your password"
+                  required
+                />
+              </div>
+            </div>
+            <div class="checkbox-group">
+              <input type="checkbox" id="terms" required />
+              <label for="terms"
+                >I agree to the <a href="#">Terms</a> and
+                <a href="#">Privacy Policy</a></label
+              >
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn btn-outline prev-btn">
+                Back
+              </button>
+              <button type="submit" class="btn btn-primary submit-btn">
+                Complete Registration
+              </button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="/JS/hospital-signup.js"></script>
+  </body>
 </html>
