@@ -49,3 +49,40 @@ flowchart TD
     D1 --> D6[Storage & Logs]
     D1 --> D7[Security & Access]
 ```
+
+### Doctor Flow
+
+```mermaid
+%%{init: {'themeVariables': { 'fontSize': '30px' }}}%%
+flowchart TD
+    E[Doctor] --> E1[Dashboard Home]
+    E1 --> E2[Patient Lookup]
+    E2 --> E3[Patient File Page]
+    E1 --> E4[Profile Page]
+    E1 --> E5[Access Logs]
+```
+
+### Patient Flow
+
+```mermaid
+%%{init: {'themeVariables': { 'fontSize': '30px' }}}%%
+flowchart TD
+    F[Patient] --> F1[Patient Home / Overview]
+    F1 --> F2[My Profile]
+    F1 --> F3[My Medical Records]
+    F3 --> F4[Document Viewer]
+    F1 --> F5[Notifications Page]
+    F1 --> F6[Support / Help Page]
+```
+
+### Super Admin Flow
+
+```mermaid
+%%{init: {'themeVariables': { 'fontSize': '30px' }}}%%
+flowchart TD
+    G[Super Admin] --> G1[Admin Dashboard]
+    G1 --> G2[Hospital Management]
+    G1 --> G3[User Management]
+    G1 --> G4[Reports & Logs]
+    G1 --> G5[Settings]
+```

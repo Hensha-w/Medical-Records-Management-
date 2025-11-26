@@ -1,3 +1,6 @@
+/* Import base styles and CSS variables */
+@import url("main.css");
+
 /* Settings CSS */
 body {
   margin: 0;
@@ -150,7 +153,8 @@ body {
   font-size: 0.9rem;
 }
 
-input, select {
+input,
+select {
   padding: 10px 12px;
   border-radius: 8px;
   border: 1px solid var(--border);
@@ -160,7 +164,8 @@ input, select {
   transition: all 0.2s;
 }
 
-input:focus, select:focus {
+input:focus,
+select:focus {
   outline: none;
   border-color: var(--primary);
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
@@ -180,14 +185,26 @@ button {
   transition: all 0.2s;
 }
 
-.btn.primary { background: var(--primary); }
-.btn.primary:hover { background: var(--primary-dark); }
+.btn.primary {
+  background: var(--primary);
+}
+.btn.primary:hover {
+  background: var(--primary-dark);
+}
 
-.btn.info { background: var(--secondary); }
-.btn.info:hover { background: var(--secondary-dark); }
+.btn.info {
+  background: var(--secondary);
+}
+.btn.info:hover {
+  background: var(--secondary-dark);
+}
 
-.btn.danger { background: #ef4444; }
-.btn.danger:hover { background: #dc2626; }
+.btn.danger {
+  background: #ef4444;
+}
+.btn.danger:hover {
+  background: #dc2626;
+}
 
 /* Switch Toggle */
 .switch {
@@ -205,8 +222,10 @@ button {
   position: absolute;
   cursor: pointer;
   background-color: var(--border);
-  top: 0; left: 0;
-  right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   border-radius: 24px;
   transition: 0.3s;
 }
@@ -221,7 +240,7 @@ button {
   background-color: white;
   border-radius: 50%;
   transition: 0.3s;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 input:checked + .slider {

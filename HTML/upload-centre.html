@@ -1,85 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Upload Centre | Hospital Dashboard</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/CSS/upload-centre.css">
-</head>
-<body>
-
-  <div class="dashboard">
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <div class="logo-section">
-        <img src="logo.png" alt="Hospital Logo" class="logo">
-        <h2>Hospital Admin</h2>
-      </div>
-      <nav class="menu">
-        <a href="#">Dashboard</a>
-        <a href="#">Hospital Profile</a>
-        <a href="#">Doctors</a>
-        <a href="#">Patients</a>
-        <a href="#" class="active">Upload Center</a>
-        <a href="#">Security</a>
-        <a href="#">Settings</a>
-        <a href="#">Support</a>
-      </nav>
-    </div>
-
-    <!-- Main Content -->
-    <div class="main-content">
-      <div class="topbar">
-        <button class="menu-toggle" id="menu-toggle">&#9776;</button>
-        <h1>Upload Centre</h1>
-        <div class="admin-info">
-          <img src="admin-avatar.jpg" alt="Admin" class="avatar">
-          <span>Admin</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload Centre | Hospital Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/CSS/main.css" />
+    <link rel="stylesheet" href="/CSS/upload-centre.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo-section">
+          <a href="/HTML/index.html" class="nav-brand">
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1IDVMNSAxNVYzNUgyNVYyNUgzNVY1SDE1WiIgc3Ryb2tlPSIjMjU2M2ViIiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTTE1IDE1SDI1VjI1SDE1VjE1WiIgc3Ryb2tlPSIjMjU2M2ViIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+"
+              alt="HealthSync Logo"
+            />
+            <span>HealthSync</span>
+          </a>
         </div>
-      </div>
+        <nav class="menu">
+          <a href="hospital-dashboard.html">
+            <i class="fas fa-th-large"></i>
+            <span>Dashboard</span>
+          </a>
+          <a href="hospital-profile.html">
+            <i class="fas fa-hospital"></i>
+            <span>Hospital Profile</span>
+          </a>
+          <a href="doctor.html">
+            <i class="fas fa-user-md"></i>
+            <span>Doctors</span>
+          </a>
+          <a href="patient.html">
+            <i class="fas fa-user-injured"></i>
+            <span>Patients</span>
+          </a>
+          <a href="upload-centre.html" class="active">
+            <i class="fas fa-cloud-upload-alt"></i>
+            <span>Upload Center</span>
+          </a>
+          <a href="storage-logs.html">
+            <i class="fas fa-database"></i>
+            <span>Storage & Logs</span>
+          </a>
+          <a href="security.html">
+            <i class="fas fa-shield-alt"></i>
+            <span>Security</span>
+          </a>
+          <a href="settings.html">
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+          </a>
+          <a href="support.html">
+            <i class="fas fa-headset"></i>
+            <span>Support</span>
+          </a>
+        </nav>
+        <div class="sidebar-footer">
+          <a href="login.html" class="logout-link">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
 
-      <!-- Upload Centre -->
-      <div class="upload-centre">
-        <div class="upload-header">
-          <h2>Manage Medical Documents</h2>
-          <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Search by Patient or Doctor">
-            <select id="fileTypeFilter">
-              <option value="">All Types</option>
-              <option value="Lab Report">Lab Report</option>
-              <option value="Prescription">Prescription</option>
-              <option value="Scan">Scan/Image</option>
-              <option value="Admin Document">Admin Document</option>
-            </select>
+      <!-- Main Content -->
+      <div class="main-content">
+        <div class="topbar">
+          <button id="menuToggle" class="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+          <h1>Upload Centre</h1>
+          <div class="admin-info">
+            <img src="admin-avatar.jpg" alt="Admin" class="avatar" />
+            <span>Admin</span>
           </div>
         </div>
 
-        <div class="upload-area" id="uploadArea">
-          <p>Drag & Drop files here or</p>
-          <label class="upload-btn" for="fileInput">Browse Files</label>
-          <input type="file" id="fileInput" multiple>
-        </div>
+        <!-- Upload Centre -->
+        <div class="upload-centre">
+          <div class="upload-header">
+            <h2>Manage Medical Documents</h2>
+            <div class="search-bar">
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="Search by Patient or Doctor"
+              />
+              <select id="fileTypeFilter">
+                <option value="">All Types</option>
+                <option value="Lab Report">Lab Report</option>
+                <option value="Prescription">Prescription</option>
+                <option value="Scan">Scan/Image</option>
+                <option value="Admin Document">Admin Document</option>
+              </select>
+            </div>
+          </div>
 
-        <table id="fileTable">
-          <thead>
-            <tr>
-              <th>File Name</th>
-              <th>Type</th>
-              <th>Uploaded By</th>
-              <th>Date</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- JS will add uploads here -->
-          </tbody>
-        </table>
+          <div class="upload-area" id="uploadArea">
+            <p>Drag & Drop files here or</p>
+            <label class="upload-btn" for="fileInput">Browse Files</label>
+            <input type="file" id="fileInput" multiple />
+          </div>
+
+          <table id="fileTable">
+            <thead>
+              <tr>
+                <th>File Name</th>
+                <th>Type</th>
+                <th>Uploaded By</th>
+                <th>Date</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- JS will add uploads here -->
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
-  </div>
 
-  <script src="/JS/upload-centre.js"></script>
-
-</body>
+    <script src="/JS/upload-centre.js"></script>
+  </body>
 </html>

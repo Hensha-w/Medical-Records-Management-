@@ -1,3 +1,6 @@
+/* Import base styles and CSS variables */
+@import url("main.css");
+
 /* Upload Centre CSS */
 body {
   margin: 0;
@@ -175,7 +178,8 @@ body {
   cursor: pointer;
 }
 
-.upload-area:hover, .upload-area.dragover {
+.upload-area:hover,
+.upload-area.dragover {
   background: #dbeafe;
   border-color: var(--primary-dark);
 }
@@ -214,7 +218,8 @@ table {
   border: 1px solid var(--border);
 }
 
-th, td {
+th,
+td {
   padding: 16px;
   text-align: left;
   border-bottom: 1px solid var(--border);
@@ -309,8 +314,9 @@ tr:hover td {
     flex-wrap: wrap;
     width: 100%;
   }
-  
-  .search-bar input, .search-bar select {
+
+  .search-bar input,
+  .search-bar select {
     flex: 1;
   }
 }

@@ -1,121 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hospital Admin Dashboard - Doctors</title>
-  <link rel="stylesheet" href="/CSS/doctor.css" />
-</head>
-<body>
-  <div class="dashboard">
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <div class="logo-section">
-        <img src="hospital-logo.png" alt="Hospital Logo" class="logo">
-        <h2>MedCare Hospital</h2>
-      </div>
-      <nav class="menu">
-        <a href="#">Dashboard</a>
-        <a href="#">Hospital Profile</a>
-        <a href="#" class="active">Doctors</a>
-        <a href="#">Patients</a>
-        <a href="#">Upload Center</a>
-        <a href="#">Security</a>
-        <a href="#">Settings</a>
-        <a href="#">Support</a>
-      </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital Admin Dashboard - Doctors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/CSS/main.css" />
+    <link rel="stylesheet" href="/CSS/hospital-dashboard.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo-section">
+          <a href="/HTML/index.html" class="nav-brand">
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1IDVMNSAxNVYzNUgyNVYyNUgzNVY1SDE1WiIgc3Ryb2tlPSIjMjU2M2ViIiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTTE1IDE1SDI1VjI1SDE1VjE1WiIgc3Ryb2tlPSIjMjU2M2ViIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+"
+              alt="HealthSync Logo"
+            />
+            <span>HealthSync</span>
+          </a>
+        </div>
+        <nav class="menu">
+          <a href="hospital-dashboard.html">
+            <i class="fas fa-th-large"></i>
+            <span>Dashboard</span>
+          </a>
+          <a href="hospital-profile.html">
+            <i class="fas fa-hospital"></i>
+            <span>Hospital Profile</span>
+          </a>
+          <a href="doctor.html" class="active">
+            <i class="fas fa-user-md"></i>
+            <span>Doctors</span>
+          </a>
+          <a href="patient.html">
+            <i class="fas fa-user-injured"></i>
+            <span>Patients</span>
+          </a>
+          <a href="upload-centre.html">
+            <i class="fas fa-cloud-upload-alt"></i>
+            <span>Upload Center</span>
+          </a>
+          <a href="storage-logs.html">
+            <i class="fas fa-database"></i>
+            <span>Storage & Logs</span>
+          </a>
+          <a href="security.html">
+            <i class="fas fa-shield-alt"></i>
+            <span>Security</span>
+          </a>
+          <a href="settings.html">
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+          </a>
+          <a href="support.html">
+            <i class="fas fa-headset"></i>
+            <span>Support</span>
+          </a>
+        </nav>
+        <div class="sidebar-footer">
+          <a href="login.html" class="logout-link">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Top Bar -->
+        <header class="topbar">
+          <button id="menuToggle" class="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="page-title">
+            <h1>Doctors Management</h1>
+          </div>
+          <div class="admin-info">
+            <div class="admin-details">
+              <span class="admin-name">Hospital Admin</span>
+              <span class="admin-role">Administrator</span>
+            </div>
+            <div class="avatar-wrapper">
+              <i class="fas fa-user-circle"></i>
+            </div>
+          </div>
+        </header>
+
+        <!-- Doctors Section -->
+        <section class="content-section" style="padding: 0">
+          <div class="section-header" style="margin-bottom: 1.5rem">
+            <h2>Doctor Directory</h2>
+            <button id="addDoctorBtn" class="btn btn-primary">
+              <i class="fas fa-plus"></i> Add Doctor
+            </button>
+          </div>
+
+          <div class="card">
+            <div class="table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Specialization</th>
+                    <th>Contact</th>
+                    <th>Gender</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="doctorList">
+                  <tr>
+                    <td>Dr. John Smith</td>
+                    <td>Cardiology</td>
+                    <td>Heart Specialist</td>
+                    <td>08012345678</td>
+                    <td>Male</td>
+                    <td><span class="badge badge-green">Active</span></td>
+                    <td>
+                      <button class="btn btn-sm btn-outline">Edit</button>
+                      <button
+                        class="btn btn-sm btn-outline"
+                        style="color: #ef4444; border-color: #ef4444"
+                      >
+                        Remove
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Dr. Sarah Wilson</td>
+                    <td>Pediatrics</td>
+                    <td>Child Specialist</td>
+                    <td>08087654321</td>
+                    <td>Female</td>
+                    <td><span class="badge badge-green">Active</span></td>
+                    <td>
+                      <button class="btn btn-sm btn-outline">Edit</button>
+                      <button
+                        class="btn btn-sm btn-outline"
+                        style="color: #ef4444; border-color: #ef4444"
+                      >
+                        Remove
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Dr. Michael Chen</td>
+                    <td>Neurology</td>
+                    <td>Brain Specialist</td>
+                    <td>08011223344</td>
+                    <td>Male</td>
+                    <td><span class="badge badge-orange">On Leave</span></td>
+                    <td>
+                      <button class="btn btn-sm btn-outline">Edit</button>
+                      <button
+                        class="btn btn-sm btn-outline"
+                        style="color: #ef4444; border-color: #ef4444"
+                      >
+                        Remove
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
 
-    <!-- Main Content -->
-    <div class="main-content">
-      <!-- Top Bar -->
-      <div class="topbar">
-        <button class="menu-toggle">&#9776;</button>
-        <h1>Doctors Management</h1>
-        <div class="admin-info">
-          <img src="avatar.png" alt="Admin" class="avatar">
-          <span>Admin</span>
-        </div>
-      </div>
+    <!-- Modal (Add/Edit Doctor) -->
+    <div class="modal" id="doctorModal">
+      <div class="modal-content">
+        <h3>Add / Edit Doctor</h3>
+        <form id="doctorForm">
+          <label>Full Name</label>
+          <input type="text" id="name" required />
 
-      <!-- Doctors Section -->
-      <div class="doctor-section">
-        <div class="header">
-          <h2>Doctor Directory</h2>
-          <button id="addDoctorBtn" class="btn edit">+ Add Doctor</button>
-        </div>
+          <label>Department</label>
+          <input type="text" id="department" required />
 
-        <div class="profile-card">
-          <table class="doctor-table">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Department</th>
-                <th>Specialization</th>
-                <th>Contact</th>
-                <th>Gender</th>
-                <th>Status</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody id="doctorList">
-              <tr>
-                <td>Dr. John Smith</td>
-                <td>Cardiology</td>
-                <td>Heart Specialist</td>
-                <td>08012345678</td>
-                <td>Male</td>
-                <td><span class="status active">Online</span></td>
-                <td>
-                  <button class="btn edit small">Edit</button>
-                  <button class="btn save small">Remove</button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+          <label>Specialization</label>
+          <input type="text" id="specialization" required />
+
+          <label>Contact Info</label>
+          <input type="text" id="contact" required />
+
+          <label>Gender</label>
+          <select id="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+
+          <label>Status</label>
+          <select id="status">
+            <option value="Active">Active</option>
+            <option value="Offline">Offline</option>
+            <option value="On Leave">On Leave</option>
+          </select>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="button" class="btn btn-outline cancel-btn">
+              Cancel
+            </button>
+          </div>
+        </form>
       </div>
     </div>
-  </div>
 
-  <!-- Modal (Add/Edit Doctor) -->
-  <div class="modal" id="doctorModal">
-    <div class="modal-content">
-      <h3>Add / Edit Doctor</h3>
-      <form id="doctorForm">
-        <label>Full Name</label>
-        <input type="text" id="name" required>
-
-        <label>Department</label>
-        <input type="text" id="department" required>
-
-        <label>Specialization</label>
-        <input type="text" id="specialization" required>
-
-        <label>Contact Info</label>
-        <input type="text" id="contact" required>
-
-        <label>Gender</label>
-        <select id="gender">
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
-        </select>
-
-        <label>Status</label>
-        <select id="status">
-          <option value="Online">Online</option>
-          <option value="Offline">Offline</option>
-          <option value="On Leave">On Leave</option>
-        </select>
-
-        <div class="form-actions">
-          <button type="submit" class="btn edit">Save</button>
-          <button type="button" class="btn save cancel-btn">Cancel</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <script src="doctors.js"></script>
-</body>
+    <script src="/JS/doctors.js"></script>
+  </body>
 </html>

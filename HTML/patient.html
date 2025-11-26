@@ -1,99 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hospital Admin Dashboard - Patients</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/CSS/patient.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital Admin Dashboard - Patients</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/CSS/main.css" />
+    <link rel="stylesheet" href="/CSS/hospital-dashboard.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo-section">
+          <a href="/HTML/index.html" class="nav-brand">
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1IDVMNSAxNVYzNUgyNVYyNUgzNVY1SDE1WiIgc3Ryb2tlPSIjMjU2M2ViIiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTTE1IDE1SDI1VjI1SDE1VjE1WiIgc3Ryb2tlPSIjMjU2M2ViIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+"
+              alt="HealthSync Logo"
+            />
+            <span>HealthSync</span>
+          </a>
+        </div>
+        <nav class="menu">
+          <a href="hospital-dashboard.html">
+            <i class="fas fa-th-large"></i>
+            <span>Dashboard</span>
+          </a>
+          <a href="hospital-profile.html">
+            <i class="fas fa-hospital"></i>
+            <span>Hospital Profile</span>
+          </a>
+          <a href="doctor.html">
+            <i class="fas fa-user-md"></i>
+            <span>Doctors</span>
+          </a>
+          <a href="patient.html" class="active">
+            <i class="fas fa-user-injured"></i>
+            <span>Patients</span>
+          </a>
+          <a href="upload-centre.html">
+            <i class="fas fa-cloud-upload-alt"></i>
+            <span>Upload Center</span>
+          </a>
+          <a href="storage-logs.html">
+            <i class="fas fa-database"></i>
+            <span>Storage & Logs</span>
+          </a>
+          <a href="security.html">
+            <i class="fas fa-shield-alt"></i>
+            <span>Security</span>
+          </a>
+          <a href="settings.html">
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+          </a>
+          <a href="support.html">
+            <i class="fas fa-headset"></i>
+            <span>Support</span>
+          </a>
+        </nav>
+        <div class="sidebar-footer">
+          <a href="login.html" class="logout-link">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
 
-  <div class="dashboard">
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <div class="logo-section">
-        <img src="logo.png" alt="Hospital Logo" class="logo">
-        <h2>Hospital Admin</h2>
-      </div>
-      <nav class="menu">
-        <a href="#">Dashboard</a>
-        <a href="#">Hospital Profile</a>
-        <a href="#">Doctors</a>
-        <a href="#" class="active">Patients</a>
-        <a href="#">Upload Center</a>
-        <a href="#">Storage Logs</a>
-        <a href="#">Security</a>
-        <a href="#">Settings</a>
-        <a href="#">Support</a>
-      </nav>
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Top Bar -->
+        <header class="topbar">
+          <button id="menuToggle" class="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="page-title">
+            <h1>Patients Management</h1>
+          </div>
+          <div class="admin-info">
+            <div class="admin-details">
+              <span class="admin-name">Hospital Admin</span>
+              <span class="admin-role">Administrator</span>
+            </div>
+            <div class="avatar-wrapper">
+              <i class="fas fa-user-circle"></i>
+            </div>
+          </div>
+        </header>
+
+        <!-- Patient Table -->
+        <section class="content-section" style="padding: 0">
+          <div class="card">
+            <div class="table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Hospital Number</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Admission Status</th>
+                    <th>Visit Date</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>PA-001</td>
+                    <td>John Doe</td>
+                    <td>Male</td>
+                    <td><span class="badge badge-green">Admitted</span></td>
+                    <td>Nov 25, 2025</td>
+                    <td>
+                      <button
+                        class="btn btn-sm btn-primary"
+                        onclick="viewRecord()"
+                      >
+                        View Record
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>PA-002</td>
+                    <td>Jane Smith</td>
+                    <td>Female</td>
+                    <td><span class="badge badge-blue">Discharged</span></td>
+                    <td>Nov 20, 2025</td>
+                    <td>
+                      <button
+                        class="btn btn-sm btn-primary"
+                        onclick="viewRecord()"
+                      >
+                        View Record
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>PA-003</td>
+                    <td>Michael Brown</td>
+                    <td>Male</td>
+                    <td><span class="badge badge-green">Admitted</span></td>
+                    <td>Nov 26, 2025</td>
+                    <td>
+                      <button
+                        class="btn btn-sm btn-primary"
+                        onclick="viewRecord()"
+                      >
+                        View Record
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
 
-    <!-- Main Content -->
-    <div class="main-content">
-      <div class="topbar">
-        <button class="menu-toggle" id="menu-toggle">&#9776;</button>
-        <h1>Patients</h1>
-        <div class="admin-info">
-          <img src="admin-avatar.jpg" alt="Admin" class="avatar">
-          <span>Admin</span>
+    <!-- Modal for Medical Records -->
+    <div class="modal" id="recordModal">
+      <div class="modal-content">
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+          "
+        >
+          <h3>Medical Records - John Doe</h3>
+          <button class="close-btn" onclick="closeModal()">&times;</button>
+        </div>
+        <div>
+          <p><strong>Hospital Number:</strong> PA-001</p>
+          <p><strong>Gender:</strong> Male</p>
+          <p><strong>Status:</strong> Admitted</p>
+          <p><strong>Admission Date:</strong> Nov 25, 2025</p>
+          <hr
+            style="
+              margin: 1rem 0;
+              border: none;
+              border-top: 1px solid var(--border);
+            "
+          />
+          <h4>Recent Tests</h4>
+          <ul>
+            <li>Blood Test - Nov 25, 2025</li>
+            <li>X-Ray - Nov 25, 2025</li>
+          </ul>
         </div>
       </div>
-
-      <!-- Patient Table -->
-      <section class="patient-section">
-        <table>
-          <thead>
-            <tr>
-              <th>Hospital Number</th>
-              <th>Name</th>
-              <th>Gender</th>
-              <th>Admission Status</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>HSP-001</td>
-              <td>Jane Doe</td>
-              <td>Female</td>
-              <td><span class="status admitted">Admitted</span></td>
-              <td><button class="btn view" onclick="openModal('Jane Doe')">View Medical Record</button></td>
-            </tr>
-            <tr>
-              <td>HSP-002</td>
-              <td>John Smith</td>
-              <td>Male</td>
-              <td><span class="status discharged">Discharged</span></td>
-              <td><button class="btn view" onclick="openModal('John Smith')">View Medical Record</button></td>
-            </tr>
-            <tr>
-              <td>HSP-003</td>
-              <td>Mary Johnson</td>
-              <td>Female</td>
-              <td><span class="status admitted">Admitted</span></td>
-              <td><button class="btn view" onclick="openModal('Mary Johnson')">View Medical Record</button></td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
     </div>
-  </div>
 
-  <!-- Modal -->
-  <div class="modal" id="recordModal">
-    <div class="modal-content">
-      <button class="close-btn" onclick="closeModal()">Close</button>
-      <h3>Medical Record</h3>
-      <p><strong>Patient Name:</strong> <span id="patientName"></span></p>
-      <p><strong>Diagnosis:</strong> Hypertension</p>
-      <p><strong>Treatment:</strong> Daily blood pressure monitoring, prescribed medication (Amlodipine 5mg)</p>
-      <p><strong>Doctor Assigned:</strong> Dr. Sarah Thomas</p>
-      <p><strong>Next Appointment:</strong> 14-Nov-2025</p>
-    </div>
-  </div>
-
-  <script src="/JS/patient.js"></script>
-
-</body>
+    <script src="/JS/patient.js"></script>
+    <script>
+      function viewRecord() {
+        document.getElementById("recordModal").style.display = "flex";
+      }
+      function closeModal() {
+        document.getElementById("recordModal").style.display = "none";
+      }
+    </script>
+  </body>
 </html>

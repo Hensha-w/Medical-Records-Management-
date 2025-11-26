@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HealthSync — Patient Lookup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/CSS/main.css" />
+    <link rel="stylesheet" href="/CSS/hospital-dashboard.css" />
+    <script defer src="/JS/hospital-dashboard.js"></script>
+  </head>
+  <body>
+    <div class="dashboard">
+      <aside class="sidebar">
+        <div class="logo-section">
+          <a href="/HTML/index.html" class="nav-brand">
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1IDVMNSAxNVYzNUgyNVYyNUgzNVY1SDE1WiIgc3Ryb2tlPSIjMjU2M2ViIiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTTE1IDE1SDI1VjI1SDE1VjE1WiIgc3Ryb2tlPSIjMjU2M2ViIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+"
+              alt="HealthSync Logo"
+            />
+            <span>HealthSync</span>
+          </a>
+        </div>
+        <nav class="menu">
+          <a href="doctor-dashboard.html"
+            ><i class="fas fa-th-large"></i><span>Dashboard</span></a
+          >
+          <a href="doctor-patient-lookup.html" class="active"
+            ><i class="fas fa-search"></i><span>Patient Lookup</span></a
+          >
+          <a href="doctor-profile.html"
+            ><i class="fas fa-user-md"></i><span>My Profile</span></a
+          >
+          <a href="doctor-access-logs.html"
+            ><i class="fas fa-history"></i><span>Access Logs</span></a
+          >
+          <a href="doctor-support.html"
+            ><i class="fas fa-headset"></i><span>Support</span></a
+          >
+        </nav>
+        <div class="sidebar-footer">
+          <a href="login.html" class="logout-link">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
+      <main class="main-content">
+        <header class="topbar">
+          <button id="menuToggle" class="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="page-title">
+            <h1>Patient Lookup</h1>
+          </div>
+          <div class="admin-info">
+            <div class="admin-details">
+              <span class="admin-name">Dr. Sarah Wilson</span>
+            </div>
+            <div class="avatar-wrapper">
+              <i class="fas fa-user-circle"></i>
+            </div>
+          </div>
+        </header>
+        <section class="content-section" style="padding: 2rem">
+          <div class="search-box" style="margin-bottom: 2rem">
+            <input
+              type="text"
+              placeholder="Enter Patient ID or Name..."
+              style="
+                padding: 1rem;
+                width: 100%;
+                max-width: 500px;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+              "
+            />
+            <button class="btn btn-primary">Search</button>
+          </div>
+          <div class="results-area">
+            <h3>Recent Patients</h3>
+            <div class="card" style="margin-top: 1rem">
+              <p>Search for a patient to view their records.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HealthSync — Doctor Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/CSS/main.css" />
+    <link rel="stylesheet" href="/CSS/hospital-dashboard.css" />
+    <script defer src="/JS/hospital-dashboard.js"></script>
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo-section">
+          <a href="/HTML/index.html" class="nav-brand">
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1IDVMNSAxNVYzNUgyNVYyNUgzNVY1SDE1WiIgc3Ryb2tlPSIjMjU2M2ViIiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTTE1IDE1SDI1VjI1SDE1VjE1WiIgc3Ryb2tlPSIjMjU2M2ViIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+"
+              alt="HealthSync Logo"
+            />
+            <span>HealthSync</span>
+          </a>
+        </div>
+        <nav class="menu">
+          <a href="doctor-dashboard.html" class="active">
+            <i class="fas fa-th-large"></i>
+            <span>Dashboard</span>
+          </a>
+          <a href="doctor-patient-lookup.html">
+            <i class="fas fa-search"></i>
+            <span>Patient Lookup</span>
+          </a>
+          <a href="doctor-profile.html">
+            <i class="fas fa-user-md"></i>
+            <span>My Profile</span>
+          </a>
+          <a href="doctor-access-logs.html">
+            <i class="fas fa-history"></i>
+            <span>Access Logs</span>
+          </a>
+          <a href="doctor-support.html">
+            <i class="fas fa-headset"></i>
+            <span>Support</span>
+          </a>
+        </nav>
+        <div class="sidebar-footer">
+          <a href="login.html" class="logout-link">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Top Bar -->
+        <header class="topbar">
+          <button id="menuToggle" class="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="page-title">
+            <h1>Doctor Dashboard</h1>
+          </div>
+          <div class="admin-info">
+            <div class="admin-details">
+              <span class="admin-name">Dr. Sarah Wilson</span>
+              <span class="admin-role">Cardiologist</span>
+            </div>
+            <div class="avatar-wrapper">
+              <i class="fas fa-user-circle"></i>
+            </div>
+          </div>
+        </header>
+
+        <!-- Overview Cards -->
+        <section class="overview">
+          <div class="card stat-card">
+            <div class="stat-icon blue">
+              <i class="fas fa-user-injured"></i>
+            </div>
+            <div class="stat-info">
+              <h3>Assigned Patients</h3>
+              <p>42</p>
+            </div>
+          </div>
+          <div class="card stat-card">
+            <div class="stat-icon green">
+              <i class="fas fa-file-medical-alt"></i>
+            </div>
+            <div class="stat-info">
+              <h3>New Reports</h3>
+              <p>8</p>
+            </div>
+          </div>
+          <div class="card stat-card">
+            <div class="stat-icon purple">
+              <i class="fas fa-calendar-check"></i>
+            </div>
+            <div class="stat-info">
+              <h3>Appointments</h3>
+              <p>12</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Notifications / Recent Updates -->
+        <section class="activity">
+          <div class="section-header">
+            <h2>Recent Updates & Notifications</h2>
+            <button class="btn btn-outline btn-sm">View All</button>
+          </div>
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>Time</th>
+                  <th>Type</th>
+                  <th>Patient</th>
+                  <th>Details</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>10:30 AM</td>
+                  <td><span class="badge badge-blue">New Upload</span></td>
+                  <td>John Smith</td>
+                  <td>Blood Test Results uploaded</td>
+                  <td><button class="btn btn-sm btn-primary">View</button></td>
+                </tr>
+                <tr>
+                  <td>09:15 AM</td>
+                  <td><span class="badge badge-green">Assignment</span></td>
+                  <td>Sarah Johnson</td>
+                  <td>New patient assigned to you</td>
+                  <td>
+                    <button class="btn btn-sm btn-primary">View Profile</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Yesterday</td>
+                  <td><span class="badge badge-purple">System</span></td>
+                  <td>-</td>
+                  <td>System maintenance scheduled for weekend</td>
+                  <td>
+                    <button class="btn btn-sm btn-outline">Dismiss</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

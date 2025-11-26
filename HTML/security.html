@@ -1,121 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hospital Security Dashboard</title>
-  <link rel="stylesheet" href="/CSS/security.css" />
-</head>
-<body>
-  <div class="dashboard">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <div class="logo-section">
-        <img src="hospital-logo.png" alt="Hospital Logo" class="logo" />
-        <h2>Hospital Admin</h2>
-      </div>
-      <nav class="menu">
-        <a href="#">Dashboard</a>
-        <a href="#">Hospital Profile</a>
-        <a href="#">Doctors</a>
-        <a href="#">Patients</a>
-        <a href="#">Upload Center</a>
-        <a href="#" class="active">Security</a>
-        <a href="#">Settings</a>
-        <a href="#">Support</a>
-      </nav>
-    </aside>
-
-    <!-- Main Content -->
-    <div class="main-content">
-      <!-- Top Bar -->
-      <div class="topbar">
-        <button class="menu-toggle">☰</button>
-        <h1>Security Management</h1>
-        <div class="admin-info">
-          <img src="admin-avatar.png" alt="Admin Avatar" class="avatar" />
-          <span>Admin</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital Security Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/CSS/main.css" />
+    <link rel="stylesheet" href="/CSS/security.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo-section">
+          <a href="/HTML/index.html" class="nav-brand">
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1IDVMNSAxNVYzNUgyNVYyNUgzNVY1SDE1WiIgc3Ryb2tlPSIjMjU2M2ViIiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTTE1IDE1SDI1VjI1SDE1VjE1WiIgc3Ryb2tlPSIjMjU2M2ViIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+"
+              alt="HealthSync Logo"
+            />
+            <span>HealthSync</span>
+          </a>
         </div>
-      </div>
+        <nav class="menu">
+          <a href="hospital-dashboard.html">
+            <i class="fas fa-th-large"></i>
+            <span>Dashboard</span>
+          </a>
+          <a href="hospital-profile.html">
+            <i class="fas fa-hospital"></i>
+            <span>Hospital Profile</span>
+          </a>
+          <a href="doctor.html">
+            <i class="fas fa-user-md"></i>
+            <span>Doctors</span>
+          </a>
+          <a href="patient.html">
+            <i class="fas fa-user-injured"></i>
+            <span>Patients</span>
+          </a>
+          <a href="upload-centre.html">
+            <i class="fas fa-cloud-upload-alt"></i>
+            <span>Upload Center</span>
+          </a>
+          <a href="storage-logs.html">
+            <i class="fas fa-database"></i>
+            <span>Storage & Logs</span>
+          </a>
+          <a href="security.html" class="active">
+            <i class="fas fa-shield-alt"></i>
+            <span>Security</span>
+          </a>
+          <a href="settings.html">
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+          </a>
+          <a href="support.html">
+            <i class="fas fa-headset"></i>
+            <span>Support</span>
+          </a>
+        </nav>
+        <div class="sidebar-footer">
+          <a href="login.html" class="logout-link">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
 
-      <!-- Security Section -->
-      <div class="security-section">
-        <!-- User Management -->
-        <div class="card">
-          <div class="section-header">
-            <h2>User Management</h2>
-            <button class="btn add">+ Add User</button>
+      <!-- Main Content -->
+      <div class="main-content">
+        <!-- Top Bar -->
+        <div class="topbar">
+          <button id="menuToggle" class="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="page-title">
+            <h1>Security Management</h1>
           </div>
-          <table>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Role</th>
-                <th>Email</th>
-                <th>Status</th>
-                <th>Access</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Dr. Sarah Johnson</td>
-                <td>Doctor</td>
-                <td>sarah.j@hospital.com</td>
-                <td><span class="status active">Active</span></td>
-                <td>Limited</td>
-                <td><button class="btn edit">Edit</button></td>
-              </tr>
-              <tr>
-                <td>Michael Smith</td>
-                <td>Admin</td>
-                <td>m.smith@hospital.com</td>
-                <td><span class="status inactive">Locked</span></td>
-                <td>Full</td>
-                <td><button class="btn unlock">Unlock</button></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Activity Logs -->
-        <div class="card">
-          <div class="section-header">
-            <h2>Activity Logs</h2>
-            <button class="btn clear" id="clearLogs">Clear Logs</button>
-          </div>
-          <ul class="activity-log" id="activityLog">
-            <li>[2025-11-12 10:24] Admin <strong>Michael</strong> logged in.</li>
-            <li>[2025-11-12 09:58] Doctor <strong>Sarah</strong> updated patient records.</li>
-            <li>[2025-11-11 22:10] Nurse <strong>Amaka</strong> viewed medication details.</li>
-          </ul>
-        </div>
-
-        <!-- Account Controls -->
-        <div class="card">
-          <h2>Account Controls</h2>
-          <div class="controls">
-            <button id="changePasswordBtn" class="btn primary">Change Password</button>
-            <button id="enable2FA" class="btn info">Enable 2FA</button>
-            <button id="lockAccount" class="btn danger">Lock Account</button>
-            <button id="unlockAccount" class="btn success">Unlock Account</button>
+          <div class="admin-info">
+            <div class="admin-details">
+              <span class="admin-name">Hospital Admin</span>
+              <span class="admin-role">Administrator</span>
+            </div>
+            <div class="avatar-wrapper">
+              <i class="fas fa-user-circle"></i>
+            </div>
           </div>
         </div>
 
-        <!-- Data Protection -->
-        <div class="card">
-          <h2>Data Protection</h2>
-          <ul class="data-status">
-            <li>Encryption Status: <span class="status active">Enabled</span></li>
-            <li>Backup: <button class="btn info" id="backupBtn">Run Backup</button></li>
-            <li>Breach Detection: <span class="status active">No Threats Detected</span></li>
-            <li>Restore Data: <button class="btn success" id="restoreBtn">Restore</button></li>
-          </ul>
+        <!-- Security Section -->
+        <div class="security-section">
+          <!-- User Management -->
+          <div class="card">
+            <div class="section-header">
+              <h2>User Management</h2>
+              <button class="btn add">+ Add User</button>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Role</th>
+                  <th>Email</th>
+                  <th>Status</th>
+                  <th>Access</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Dr. Sarah Johnson</td>
+                  <td>Doctor</td>
+                  <td>sarah.j@hospital.com</td>
+                  <td><span class="status active">Active</span></td>
+                  <td>Limited</td>
+                  <td><button class="btn edit">Edit</button></td>
+                </tr>
+                <tr>
+                  <td>Michael Smith</td>
+                  <td>Admin</td>
+                  <td>m.smith@hospital.com</td>
+                  <td><span class="status inactive">Locked</span></td>
+                  <td>Full</td>
+                  <td><button class="btn unlock">Unlock</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Activity Logs -->
+          <div class="card">
+            <div class="section-header">
+              <h2>Activity Logs</h2>
+              <button class="btn clear" id="clearLogs">Clear Logs</button>
+            </div>
+            <ul class="activity-log" id="activityLog">
+              <li>
+                [2025-11-12 10:24] Admin <strong>Michael</strong> logged in.
+              </li>
+              <li>
+                [2025-11-12 09:58] Doctor <strong>Sarah</strong> updated patient
+                records.
+              </li>
+              <li>
+                [2025-11-11 22:10] Nurse <strong>Amaka</strong> viewed
+                medication details.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Account Controls -->
+          <div class="card">
+            <h2>Account Controls</h2>
+            <div class="controls">
+              <button id="changePasswordBtn" class="btn primary">
+                Change Password
+              </button>
+              <button id="enable2FA" class="btn info">Enable 2FA</button>
+              <button id="lockAccount" class="btn danger">Lock Account</button>
+              <button id="unlockAccount" class="btn success">
+                Unlock Account
+              </button>
+            </div>
+          </div>
+
+          <!-- Data Protection -->
+          <div class="card">
+            <h2>Data Protection</h2>
+            <ul class="data-status">
+              <li>
+                Encryption Status: <span class="status active">Enabled</span>
+              </li>
+              <li>
+                Backup:
+                <button class="btn info" id="backupBtn">Run Backup</button>
+              </li>
+              <li>
+                Breach Detection:
+                <span class="status active">No Threats Detected</span>
+              </li>
+              <li>
+                Restore Data:
+                <button class="btn success" id="restoreBtn">Restore</button>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <script src="/JS/security.js"></script>
-</body>
+    <script src="/JS/security.js"></script>
+  </body>
 </html>

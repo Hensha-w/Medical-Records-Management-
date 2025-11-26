@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HealthSync — Reports & Logs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/CSS/main.css" />
+    <link rel="stylesheet" href="/CSS/hospital-dashboard.css" />
+    <script defer src="/JS/hospital-dashboard.js"></script>
+  </head>
+  <body>
+    <div class="dashboard">
+      <aside class="sidebar">
+        <div class="logo-section">
+          <a href="/HTML/index.html" class="nav-brand">
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1IDVMNSAxNVYzNUgyNVYyNUgzNVY1SDE1WiIgc3Ryb2tlPSIjMjU2M2ViIiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTTE1IDE1SDI1VjI1SDE1VjE1WiIgc3Ryb2tlPSIjMjU2M2ViIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+"
+              alt="HealthSync Logo"
+            />
+            <span>HealthSync</span>
+          </a>
+        </div>
+        <nav class="menu">
+          <a href="admin-dashboard.html">
+            <i class="fas fa-tachometer-alt"></i>
+            <span>Dashboard</span>
+          </a>
+          <a href="admin-hospitals.html">
+            <i class="fas fa-hospital"></i>
+            <span>Hospitals</span>
+          </a>
+          <a href="admin-users.html">
+            <i class="fas fa-users"></i>
+            <span>User Management</span>
+          </a>
+          <a href="admin-reports.html" class="active">
+            <i class="fas fa-chart-bar"></i>
+            <span>Reports & Logs</span>
+          </a>
+          <a href="admin-settings.html">
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+          </a>
+        </nav>
+        <div class="sidebar-footer">
+          <a href="login.html" class="logout-link">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
+      <main class="main-content">
+        <header class="topbar">
+          <button id="menuToggle" class="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="page-title">
+            <h1>Reports & System Logs</h1>
+          </div>
+          <div class="admin-info">
+            <div class="admin-details">
+              <span class="admin-name">Super Admin</span>
+              <span class="admin-role">System Administrator</span>
+            </div>
+            <div class="avatar-wrapper">
+              <i class="fas fa-user-shield"></i>
+            </div>
+          </div>
+        </header>
+        <section class="content-section" style="padding: 2rem">
+          <div class="card">
+            <h2>System Logs</h2>
+            <div class="table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Timestamp</th>
+                    <th>Event Type</th>
+                    <th>Description</th>
+                    <th>Severity</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Nov 26, 2025 11:00 AM</td>
+                    <td>Security Alert</td>
+                    <td>Failed login attempt from IP 192.168.1.1</td>
+                    <td><span class="badge badge-orange">Medium</span></td>
+                  </tr>
+                  <tr>
+                    <td>Nov 26, 2025 10:00 AM</td>
+                    <td>System Update</td>
+                    <td>Database backup completed successfully</td>
+                    <td><span class="badge badge-green">Low</span></td>
+                  </tr>
+                  <tr>
+                    <td>Nov 25, 2025 09:00 PM</td>
+                    <td>Error</td>
+                    <td>Connection timeout on server node 3</td>
+                    <td>
+                      <span
+                        class="badge badge-red"
+                        style="background-color: #fee2e2; color: #dc2626"
+                        >High</span
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,3 +1,6 @@
+/* Import base styles and CSS variables */
+@import url("main.css");
+
 /* Security CSS */
 body {
   margin: 0;
@@ -152,7 +155,8 @@ table {
   border: 1px solid var(--border);
 }
 
-th, td {
+th,
+td {
   padding: 16px;
   text-align: left;
   border-bottom: 1px solid var(--border);
@@ -190,22 +194,47 @@ tr:hover td {
   color: white;
 }
 
-.btn.add { background: var(--primary); }
-.btn.add:hover { background: var(--primary-dark); }
+.btn.add {
+  background: var(--primary);
+}
+.btn.add:hover {
+  background: var(--primary-dark);
+}
 
-.btn.edit { background: var(--accent); color: white; }
-.btn.edit:hover { opacity: 0.9; }
+.btn.edit {
+  background: var(--accent);
+  color: white;
+}
+.btn.edit:hover {
+  opacity: 0.9;
+}
 
-.btn.unlock { background: var(--secondary); }
-.btn.unlock:hover { background: var(--secondary-dark); }
+.btn.unlock {
+  background: var(--secondary);
+}
+.btn.unlock:hover {
+  background: var(--secondary-dark);
+}
 
-.btn.clear { background: var(--text-light); }
-.btn.clear:hover { background: var(--text); }
+.btn.clear {
+  background: var(--text-light);
+}
+.btn.clear:hover {
+  background: var(--text);
+}
 
-.btn.primary { background: var(--primary); }
-.btn.info { background: var(--secondary); }
-.btn.success { background: #10b981; }
-.btn.danger { background: #ef4444; }
+.btn.primary {
+  background: var(--primary);
+}
+.btn.info {
+  background: var(--secondary);
+}
+.btn.success {
+  background: #10b981;
+}
+.btn.danger {
+  background: #ef4444;
+}
 
 /* Status */
 .status.active {

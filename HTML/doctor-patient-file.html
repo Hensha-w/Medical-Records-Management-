@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HealthSync — Patient File</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/CSS/main.css" />
+    <link rel="stylesheet" href="/CSS/hospital-dashboard.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <aside class="sidebar">
+        <div class="logo-section">
+          <a href="/HTML/index.html" class="nav-brand">
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1IDVMNSAxNVYzNUgyNVYyNUgzNVY1SDE1WiIgc3Ryb2tlPSIjMjU2M2ViIiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTTE1IDE1SDI1VjI1SDE1VjE1WiIgc3Ryb2tlPSIjMjU2M2ViIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+"
+              alt="HealthSync Logo"
+            />
+            <span>HealthSync</span>
+          </a>
+        </div>
+        <nav class="menu">
+          <a href="doctor-dashboard.html"
+            ><i class="fas fa-th-large"></i><span>Dashboard</span></a
+          >
+          <a href="doctor-patient-lookup.html" class="active"
+            ><i class="fas fa-search"></i><span>Patient Lookup</span></a
+          >
+          <a href="doctor-profile.html"
+            ><i class="fas fa-user-md"></i><span>My Profile</span></a
+          >
+          <a href="doctor-access-logs.html"
+            ><i class="fas fa-history"></i><span>Access Logs</span></a
+          >
+          <a href="doctor-support.html"
+            ><i class="fas fa-headset"></i><span>Support</span></a
+          >
+        </nav>
+        <div class="sidebar-footer">
+          <a href="login.html" class="logout-link">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
+      <main class="main-content">
+        <header class="topbar">
+          <h1>Patient File: John Smith</h1>
+          <div class="admin-info">
+            <span>Dr. Sarah Wilson</span>
+            <i class="fas fa-user-circle"></i>
+          </div>
+        </header>
+        <section class="content-section" style="padding: 2rem">
+          <div class="card">
+            <div
+              class="tabs"
+              style="margin-bottom: 1rem; border-bottom: 1px solid #ddd"
+            >
+              <button class="btn btn-outline" style="margin-right: 0.5rem">
+                All Records
+              </button>
+              <button class="btn btn-outline" style="margin-right: 0.5rem">
+                Lab Results
+              </button>
+              <button class="btn btn-outline" style="margin-right: 0.5rem">
+                Imaging
+              </button>
+              <button class="btn btn-outline">Prescriptions</button>
+            </div>
+            <div class="record-list">
+              <div
+                class="record-item"
+                style="
+                  padding: 1rem;
+                  border-bottom: 1px solid #eee;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <div>
+                  <h4>Chest X-Ray</h4>
+                  <p class="text-sm text-light">Uploaded: Nov 20, 2025</p>
+                </div>
+                <div>
+                  <button class="btn btn-sm btn-primary">View</button>
+                  <button class="btn btn-sm btn-outline">Download</button>
+                </div>
+              </div>
+              <div
+                class="record-item"
+                style="
+                  padding: 1rem;
+                  border-bottom: 1px solid #eee;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <div>
+                  <h4>Blood Test Results</h4>
+                  <p class="text-sm text-light">Uploaded: Nov 18, 2025</p>
+                </div>
+                <div>
+                  <button class="btn btn-sm btn-primary">View</button>
+                  <button class="btn btn-sm btn-outline">Download</button>
+                </div>
+              </div>
+            </div>
+            <div class="notes-section" style="margin-top: 2rem">
+              <h3>Doctor's Notes</h3>
+              <textarea
+                placeholder="Add a note..."
+                style="
+                  width: 100%;
+                  padding: 1rem;
+                  border: 1px solid #ddd;
+                  border-radius: 8px;
+                  min-height: 100px;
+                "
+              ></textarea>
+              <button class="btn btn-primary" style="margin-top: 1rem">
+                Save Note
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
